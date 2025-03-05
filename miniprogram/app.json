@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/inventory/list",
+    "pages/inventory/map",
+    "pages/inventory/detail",
+    "pages/scan/index",
+    "pages/user/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "实验室物品管理系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1AAD19",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/inventory/list",
+        "text": "库存",
+        "iconPath": "assets/icons/inventory.png",
+        "selectedIconPath": "assets/icons/inventory-active.png"
+      },
+      {
+        "pagePath": "pages/scan/index",
+        "text": "扫码",
+        "iconPath": "assets/icons/scan.png",
+        "selectedIconPath": "assets/icons/scan-active.png"
+      },
+      {
+        "pagePath": "pages/user/profile",
+        "text": "我的",
+        "iconPath": "assets/icons/user.png",
+        "selectedIconPath": "assets/icons/user-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于实验室地图定位"
+    }
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,161 @@
+/* 全局样式 */
+page {
+  background-color: #f8f8f8;
+  font-size: 28rpx;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+}
+
+/* 通用容器 */
+.container {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+/* 卡片样式 */
+.card {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+}
+
+/* 列表样式 */
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 4rpx 16rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+}
+
+/* 库存状态标签 */
+.tag-warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.tag-danger {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.tag-success {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-block;
+  padding: 16rpx 32rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #1AAD19;
+  color: #fff;
+}
+
+.btn-default {
+  background: #f8f9fa;
+  color: #333;
+  border: 1rpx solid #ddd;
+}
+
+/* 表单样式 */
+.form-group {
+  margin-bottom: 24rpx;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8rpx;
+  color: #666;
+}
+
+.form-input {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 24rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}
+
+/* 网格布局 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+  padding: 20rpx;
+}
+
+/* 图标样式 */
+.icon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+/* 文本样式 */
+.text-primary {
+  color: #1AAD19;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.text-warning {
+  color: #ffc107;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+/* 辅助类 */
+.mt-20 {
+  margin-top: 20rpx;
+}
+
+.mb-20 {
+  margin-bottom: 20rpx;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

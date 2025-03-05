@@ -1,0 +1,74 @@
+<view class="container">
+  <!-- 顶部统计卡片 -->
+  <view class="card stats-card">
+    <view class="flex-between">
+      <view class="stats-item">
+        <text class="stats-label">总库存数</text>
+        <text class="stats-value">{{totalItems}}</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-label">预警数</text>
+        <text class="stats-value text-warning">{{warningItems}}</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-label">临期数</text>
+        <text class="stats-value text-danger">{{expiringItems}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 快捷功能区 -->
+  <view class="card">
+    <view class="section-title">快捷功能</view>
+    <view class="grid quick-actions">
+      <view class="quick-action-item" bindtap="navigateToScan">
+        <image class="quick-action-icon" src="/assets/icons/scan.png" />
+        <text>扫码查询</text>
+      </view>
+      <view class="quick-action-item" bindtap="navigateToMap">
+        <image class="quick-action-icon" src="/assets/icons/map.png" />
+        <text>位置查看</text>
+      </view>
+      <view class="quick-action-item" bindtap="navigateToVoiceSearch">
+        <image class="quick-action-icon" src="/assets/icons/voice.png" />
+        <text>语音搜索</text>
+      </view>
+      <view class="quick-action-item" bindtap="navigateToInventory">
+        <image class="quick-action-icon" src="/assets/icons/list.png" />
+        <text>库存清单</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 预警提醒 -->
+  <view class="card" wx:if="{{warnings.length > 0}}">
+    <view class="section-title">预警提醒</view>
+    <view class="warning-list">
+      <view class="warning-item" wx:for="{{warnings}}" wx:key="id" bindtap="navigateToDetail" data-id="{{item.id}}">
+        <view class="flex-between">
+          <view class="warning-info">
+            <text class="warning-name">{{item.name}}</text>
+            <text class="warning-type {{item.type === 'stock' ? 'text-warning' : 'text-danger'}}">{{item.type === 'stock' ? '库存不足' : '即将过期'}}</text>
+          </view>
+          <text class="warning-value">{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最近操作 -->
+  <view class="card">
+    <view class="section-title">最近操作</view>
+    <view class="operation-list">
+      <view class="operation-item" wx:for="{{recentOperations}}" wx:key="id">
+        <view class="flex-between">
+          <view class="operation-info">
+            <text class="operation-type">{{item.type}}</text>
+            <text class="operation-name">{{item.itemName}}</text>
+          </view>
+          <text class="operation-time text-muted">{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
